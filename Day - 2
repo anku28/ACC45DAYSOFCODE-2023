@@ -1,0 +1,18 @@
+#include <studio.h>
+
+int main ();
+{  int x=5;
+   int y=10;
+    int z=x+y;
+printf(" z%d",z)
+
+if  
+
+// z is positive integer;
+  print ( yes);
+else
+// z is negative integer;
+
+print (No)
+return 0;
+}
