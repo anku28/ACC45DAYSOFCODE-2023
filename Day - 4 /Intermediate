@@ -1,0 +1,20 @@
+mport math
+
+# Function to calculate the longest time the hare can wait
+def longest_waiting_time(L, V1, V2):
+    tortoise_time = L / V1  # Time taken by the tortoise
+    hare_time = math.ceil(L / V2)  # Time taken by the hare (rounded up)
+
+    if tortoise_time < hare_time:
+        return 0  # The hare can start immediately and win
+    else:
+        return -1  # The hare can't win no matter what
+
+# Input the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    L, V1, V2 = map(int, input().split())
+    result = longest_waiting_time(L, V1, V2)
+    print(result)
