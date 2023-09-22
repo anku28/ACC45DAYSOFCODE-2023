@@ -1,0 +1,13 @@
+# Read the number of test cases
+T = int(input())
+
+# Iterate through each test case
+for _ in range(T):
+    # Read the battery level for this test case
+    X = int(input())
+    
+    # Check if the battery level is 15% or less
+    if X <= 15:
+        print("Yes")
+    else:
+        print("No")
