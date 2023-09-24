@@ -1,0 +1,16 @@
+# Function to check if an account is spam
+def is_spam(x, y):
+    return x > 10 * y
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    x, y = map(int, input().split())
+    
+    # Check if the account is spam and print the result
+    if is_spam(x, y):
+        print("YES")
+    else:
+        print("NO")
