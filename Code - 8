@@ -1,0 +1,12 @@
+# Function to calculate the maximum number of people who can take a bath
+def max_people_to_bath(x, y):
+    required_water_per_person = 2 * y
+    max_people = x // required_water_per_person
+    return max_people
+
+# Input the number of test cases
+T = int(input())
+for _ in range(T):
+    x, y = map(int, input().split())
+    result = max_people_to_bath(x, y)
+    print(result)
