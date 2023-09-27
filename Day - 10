@@ -1,0 +1,22 @@
+# Define a function to calculate the maximum number of chocolates Chef can buy for each test case
+def max_chocolates(T, test_cases):
+    results = []  # To store the results for each test case
+    for i in range(T):
+        X, Y = test_cases[i]
+        chocolates = X // Y  # Calculate the maximum number of chocolates
+        results.append(chocolates)
+    return results
+
+# Input the number of test cases
+T = int(input())
+test_cases = []
+
+# Input the test cases
+for _ in range(T):
+    X, Y = map(int, input().split())
+    test_cases.append((X, Y))
+
+# Calculate and print the results
+results = max_chocolates(T, test_cases)
+for res in results:
+    print(res)
