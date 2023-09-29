@@ -1,0 +1,25 @@
+# Function to calculate the minimum time to shoot the bullet
+def min_shoot_time(T, test_cases):
+    results = []
+    
+    for i in range(T):
+        A, B, X, Y, Z = test_cases[i]
+        # Calculate the time it takes for the bullet to reach the goomba
+        bullet_time = (B - A) // X
+        # Calculate the minimum time to shoot the bullet
+        min_time = max(0, bullet_time - Z)
+        results.append(min_time)
+    
+    return results
+
+# Input
+T = int(input())
+test_cases = []
+for _ in range(T):
+    A, B, X, Y, Z = map(int, input().split())
+    test_cases.append((A, B, X, Y, Z))
+
+# Calculate and print the minimum shoot times
+results = min_shoot_time(T, test_cases)
+for result in results:
+    print(result)
