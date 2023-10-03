@@ -1,0 +1,20 @@
+# Function to check if Chef can distribute candies as per conditions
+def can_distribute_candies(N, M):
+    if N % M == 0 and M % 2 == 0:
+        return "Yes"
+    else:
+        return "No"
+
+# Input the number of test cases
+T = int(input())
+results = []
+
+# Process each test case
+for _ in range(T):
+    N, M = map(int, input().split())
+    result = can_distribute_candies(N, M)
+    results.append(result)
+
+# Output the results
+for result in results:
+    print(result)
