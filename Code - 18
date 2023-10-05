@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T; // Number of test cases
+    
+    while (T--) {
+        int A, B;
+        cin >> A >> B; // Alice's and Bob's scores
+        
+        // Calculate the minimum points to end the match
+        int min_points_to_end = max(7 - A, 7 - B);
+        
+        // Print the result for this test case
+        cout << min_points_to_end << endl;
+    }
+    
+    return 0;
+}
