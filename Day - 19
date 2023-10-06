@@ -1,0 +1,21 @@
+# Function to determine the better rank
+def determine_rank(PA, PB, QA, QB):
+    time_penalty_P = min(PA, PB)
+    time_penalty_Q = min(QA, QB)
+    
+    if time_penalty_P < time_penalty_Q:
+        return "P"
+    elif time_penalty_P > time_penalty_Q:
+        return "Q"
+    else:
+        return "TIE"
+
+# Input number of test cases
+T = int(input())
+for _ in range(T):
+    # Input PA, PB, QA, QB for each test case
+    PA, PB, QA, QB = map(int, input().split())
+    
+    # Determine and print the result
+    result = determine_rank(PA, PB, QA, QB)
+    print(result)
