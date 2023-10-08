@@ -1,0 +1,22 @@
+# Function to calculate Bob's final account balance
+def final_balance(initial_balance, monthly_deposit, monthly_charge, num_months):
+    balance = initial_balance
+    for _ in range(num_months):
+        balance += monthly_deposit - monthly_charge
+    return balance
+
+# Input the number of test cases
+T = int(input())
+
+# Initialize a list to store the results
+results = []
+
+# Iterate through each test case
+for _ in range(T):
+    W, X, Y, Z = map(int, input().split())
+    final = final_balance(W, X, Y, Z)
+    results.append(final)
+
+# Output the results
+for final in results:
+    print(final)
