@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+
+int main() {
+    int x;
+    printf("Enter value");
+    scanf("%d",&x);
+    if(x>=0)
+    {
+    printf("Number of +ve");
+    }
+    if (x<0)
+    {
+        printf("Number of -ve");
+    }
+}
