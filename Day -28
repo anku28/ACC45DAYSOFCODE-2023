@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T); // Number of test cases
+
+    while (T--) {
+        int X;
+        scanf("%d", &X); // Marks Chef received
+
+        // Calculate the minimum number of problems Chef marked incorrect
+        int incorrect = 0;
+        if (X % 3 == 1) {
+            incorrect = 1;
+        } else if (X % 3 == 2) {
+            incorrect = 2;
+        }
+
+        printf("%d\n", incorrect);
+    }
+
+    return 0;
+}
