@@ -1,0 +1,15 @@
+# Define a function to check if any two of the three people can contribute enough to buy a Netflix subscription
+def can_contribute_to_netflix_subscription(a, b, c, x):
+    if a + b >= x or a + c >= x or b + c >= x:
+        return "YES"
+    else:
+        return "NO"
+
+# Input the number of test cases
+T = int(input())
+
+# Iterate through each test case
+for _ in range(T):
+    a, b, c, x = map(int, input().split())
+    result = can_contribute_to_netflix_subscription(a, b, c, x)
+    print(result)
