@@ -1,0 +1,23 @@
+def minimum_money_to_spend(T, test_cases):
+    results = []
+    for i in range(T):
+        C, X, Y = test_cases[i]
+        if X >= C:
+            results.append(0)
+        else:
+            additional_chocolates = C - X
+            cost = additional_chocolates * Y
+            results.append(cost)
+    return results
+
+# Input
+T = int(input())
+test_cases = []
+for _ in range(T):
+    C, X, Y = map(int, input().split())
+    test_cases.append((C, X, Y))
+
+# Calculate and print results
+results = minimum_money_to_spend(T, test_cases)
+for result in results:
+    print(result)
