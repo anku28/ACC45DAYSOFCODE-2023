@@ -1,0 +1,25 @@
+# Function to determine if Chef can achieve exactly Y marks
+def can_achieve_marks(N, X, Y):
+    # Calculate the minimum and maximum possible marks Chef can get
+    min_possible_marks = 0
+    max_possible_marks = N * X
+
+    # Check if Y is within the achievable range
+    if Y >= min_possible_marks and Y <= max_possible_marks:
+        # Check if Y is divisible by X (to achieve it using X marks only)
+        if Y % X == 0:
+            return "YES"
+        # Check if Y can be achieved using 0 marks
+        if (N - (Y // X)) >= 0:
+            return "YES"
+    
+    return "NO"
+
+# Input the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    N, X, Y = map(int, input().split())
+    result = can_achieve_marks(N, X, Y)
+    print(result)
