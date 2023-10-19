@@ -1,0 +1,26 @@
+# Function to count eligible voters for each test case
+def count_eligible_voters(test_cases):
+    results = []
+    for case in test_cases:
+        n, x, ages = case
+        eligible_voters = sum(1 for age in ages if age >= x)
+        results.append(eligible_voters)
+    return results
+
+# Main function
+def main():
+    t = int(input())  # Number of test cases
+    test_cases = []
+    
+    for _ in range(t):
+        n, x = map(int, input().split())
+        ages = list(map(int, input().split()))
+        test_cases.append((n, x, ages))
+    
+    results = count_eligible_voters(test_cases)
+    
+    for result in results:
+        print(result)
+
+if _name_ == "__main":
+    main()
