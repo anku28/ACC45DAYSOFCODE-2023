@@ -1,0 +1,18 @@
+# Function to calculate the minimum time for the policeman to catch the thief
+def min_time_to_catch_thief(X, Y):
+    # Calculate the absolute difference between the initial positions of the policeman and the thief
+    diff = abs(X - Y)
+    
+    # Calculate the minimum time it takes for the policeman to catch the thief
+    time = diff / 3
+    
+    return int(time)  # Convert time to an integer
+
+# Input the number of test cases
+T = int(input())
+
+# Iterate through each test case
+for _ in range(T):
+    X, Y = map(int, input().split())
+    # Calculate and print the minimum time for the policeman to catch the thief
+    print(min_time_to_catch_thief(X, Y))
