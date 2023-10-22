@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+// Function to check if it's possible to measure the weight
+char* canMeasureWeight(int a, int b, int c, int w, int x, int y, int z) {
+    // Check all possible combinations of the given weights
+    int possible_combinations[] = {a, b, c, a + b, a + c, b + c, a + b + c};
+    int i;
+    
+    // Check if any combination matches the desired weight
+    for (i = 0; i < 7; i++) {
+        if (possible_combinations[i] == w || possible_combinations[i] == x || possible_combinations[i] == y || possible_combinations[i] == z) {
+            return "YES";
+        }
+    }
+    
+    return "NO";
+}
+
+int main() {
+    int T;
+    scanf("%d", &T); // Input the number of test cases
+    
+    while (T--) {
+        int a, b, c, w, x, y, z;
+        scanf("%d %d %d %d %d %d %d", &a, &b, &c, &w, &x, &y, &z);
+        char* result = canMeasureWeight(a, b, c, w, x, y, z);
+        printf("%s\n", result);
+    }
+    
+    return 0;
+}
