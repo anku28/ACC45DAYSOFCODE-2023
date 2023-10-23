@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+// Function to calculate the maximum number of neighbors Chef can feed
+int max_neighbors_chef_can_feed(int X, int Y) {
+    return X / Y;
+}
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    for (int i = 0; i < T; i++) {
+        int X, Y; // Number of plates prepared and plates each neighbor takes
+        scanf("%d %d", &X, &Y);
+        int max_neighbors = max_neighbors_chef_can_feed(X, Y);
+        printf("%d\n", max_neighbors);
+    }
+
+    return 0;
+}
