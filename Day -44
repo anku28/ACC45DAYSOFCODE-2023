@@ -1,0 +1,18 @@
+# Function to find the minimum number of coins Chef needs to pay X rupees
+def find_minimum_coins(X):
+    if X % 5 != 0:
+        return -1  # It's impossible to pay X rupees in denominations of 5 and 10
+
+    num_10_rupee_coins = X // 10
+    num_5_rupee_coins = (X % 10) // 5
+
+    return num_10_rupee_coins + num_5_rupee_coins
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    X = int(input())
+    result = find_minimum_coins(X)
+    print(result)
