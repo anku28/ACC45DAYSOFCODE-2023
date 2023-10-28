@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    while (T--) {
+        int N; // Number of spooky days
+        scanf("%d", &N);
+
+        int count = 0;
+        int day = 1; // Start on Monday (day 1)
+
+        for (int i = 1; i <= N; i++) {
+            if (day == 2) { // Tuesday
+                count++;
+            }
+            day = (day % 7) + 1; // Move to the next day of the week
+        }
+
+        printf("%d\n", count);
+    }
+
+    return 0;
+}
