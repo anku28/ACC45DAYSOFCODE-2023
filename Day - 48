@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int X, Y;
+    scanf("%d %d", &X, &Y);
+    
+    // Calculate the time spent at double speed
+    int double_speed_time = Y / 2;
+    
+    // Calculate the time spent at normal speed
+    int normal_speed_time = X - double_speed_time;
+    
+    // Calculate the total time spent
+    int total_time = double_speed_time + normal_speed_time;
+    
+    printf("%d\n", total_time);
+    
+    return 0;
+}
