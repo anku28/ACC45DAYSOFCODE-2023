@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    for (int i = 0; i < T; i++) {
+        int A, B;
+        scanf("%d %d", &A, &B);
+
+        int valuation_A = A * 10; // Valuation of the first investor
+        int valuation_B = B * 5;  // Valuation of the second investor
+
+        if (valuation_A > valuation_B) {
+            printf("FIRST\n");
+        } else if (valuation_B > valuation_A) {
+            printf("SECOND\n");
+        } else {
+            printf("ANY\n");
+        }
+    }
+
+    return 0;
+}
