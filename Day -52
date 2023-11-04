@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    
+    while (T--) {
+        int N, X, D;
+        scanf("%d %d %d", &N, &X, &D);
+        
+        int daily_consumption = 5 * X;
+        int days_survived = 0;
+        
+        if (N >= daily_consumption) {
+            days_survived = N / daily_consumption;
+        } else {
+            days_survived = (N / daily_consumption) + D;
+        }
+        
+        printf("%d\n", days_survived);
+    }
+    
+    return 0;
+}
