@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    while (T--) {
+        int N; // Number of women in the test case
+        scanf("%d", &N);
+
+        int count = 0; // Initialize a counter for eligible women
+
+        for (int i = 0; i < N; i++) {
+            int age;
+            scanf("%d", &age);
+
+            // Check if the age is between 10 and 60 (inclusive)
+            if (age >= 10 && age <= 60) {
+                count++;
+            }
+        }
+
+        // Print the number of eligible women for this test case
+        printf("%d\n", count);
+    }
+
+    return 0;
+}
