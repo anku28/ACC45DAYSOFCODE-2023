@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    while (T--) {
+        int X, Y;
+        scanf("%d %d", &X, &Y);
+
+        int games_needed = (Y - X + 7) / 8;
+        if (games_needed < 0) {
+            games_needed = 0;
+        }
+
+        printf("%d\n", games_needed);
+    }
+
+    return 0;
+}
